@@ -1,5 +1,5 @@
 #include "Application.h"
-#include <raylib.h>
+
 
 Application::Application()
 {
@@ -53,7 +53,11 @@ void Application::run(const char* title, int width, int height)
 
 			ClearBackground(RAYWHITE);
 
+			BeginMode3D(m_camera);
+
 			draw();
+
+			EndMode3D();
 
 			EndDrawing();
 		}

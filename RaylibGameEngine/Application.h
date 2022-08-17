@@ -1,4 +1,5 @@
 #pragma once
+#include <raylib.h>
 class Application
 {
 public:
@@ -19,5 +20,7 @@ protected:
 	virtual void destroyWindow();
 
 	unsigned int m_fps;
+
+	Camera3D m_camera;
 };
 

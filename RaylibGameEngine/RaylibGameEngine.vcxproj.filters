@@ -13,7 +13,7 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\NewFilter1">
+    <Filter Include="Source Files\Components">
       <UniqueIdentifier>{a89c5d0f-ce56-4e4f-8461-23d9894eed54}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
