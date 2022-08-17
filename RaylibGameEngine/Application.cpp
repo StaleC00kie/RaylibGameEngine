@@ -49,7 +49,13 @@ void Application::run(const char* title, int width, int height)
 
 			update(float(deltaTime));
 
+			BeginDrawing();
+
+			ClearBackground(RAYWHITE);
+
 			draw();
+
+			EndDrawing();
 		}
 	}
 
@@ -65,5 +71,5 @@ void Application::createWindow(const char* title, int width, int height)
 
 void Application::destroyWindow()
 {
-
+	CloseWindow(); // Close window and OpenGL context
 }
