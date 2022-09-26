@@ -22,6 +22,11 @@ bool EngineApplication::startup()
 	m_camera.projection = CAMERA_PERSPECTIVE;    // Camera mode type
 
 	SetCameraMode(m_camera, CAMERA_FREE);
+	
+	//model = LoadModel("../Models/sphere.obj");
+
+
+	m_modelRenderer = new ModelRenderer("../Models/Bunny.obj");
 
 	return true;
 }
@@ -32,9 +37,12 @@ void EngineApplication::shutdown()
 
 void EngineApplication::update(float deltaTime)
 {
+
 }
 
 void EngineApplication::draw()
 {
+	m_modelRenderer->draw();
+	//DrawModel(model, {0, 0, 0}, 1, WHITE);
 	DrawGrid(10, 1.0f);
 }

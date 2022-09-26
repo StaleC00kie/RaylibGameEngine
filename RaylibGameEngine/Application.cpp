@@ -1,9 +1,9 @@
 #include "Application.h"
 
-
 Application::Application()
 {
 	m_fps = 0;
+	m_camera = { 0 };
 }
 
 Application::~Application()
@@ -26,11 +26,11 @@ void Application::run(const char* title, int width, int height)
 		{
 			currTime = GetTime();
 
-			deltaTime = currTime - prevTime;
+			Time::deltaTime = currTime - prevTime;
 
-			if (deltaTime > 0.1f)
+			if (Time::deltaTime > 0.1f)
 			{
-				deltaTime = 0.1f;
+				Time::deltaTime = 0.1f;
 			}
 
 			prevTime = currTime;
@@ -38,7 +38,7 @@ void Application::run(const char* title, int width, int height)
 			// TODO: get input manager
 
 			frames++;
-			fpsInterval += deltaTime;
+			fpsInterval += Time::deltaTime;
 
 			if (fpsInterval >= 1.0f) 
 			{
@@ -47,7 +47,7 @@ void Application::run(const char* title, int width, int height)
 				fpsInterval -= 1.0f;
 			}
 
-			update(float(deltaTime));
+			update(float(Time::deltaTime));
 
 			BeginDrawing();
 

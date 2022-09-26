@@ -1,12 +1,13 @@
 #pragma once
 #include <raylib.h>
+#include "Time.h"
+
 class Application
 {
 public:
 
 	Application();
 	virtual ~Application();
-
 
 	void run(const char* title, int width, int height);
 
